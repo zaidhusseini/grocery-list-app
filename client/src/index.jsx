@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AddGrocery from './components/AddGrocery.jsx';
+import GroceryList from './components/GroceryList.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,9 +16,12 @@ class App extends React.Component {
     }
   }
 
-  
+    
   render () {
-    return null;
+    return (<div>
+          <AddGrocery />
+          <GroceryList list={this.state.list} />
+        </div>);
   }
 }
 
