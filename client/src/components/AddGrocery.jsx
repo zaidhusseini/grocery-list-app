@@ -22,7 +22,7 @@ class AddGrocery extends React.Component {
     return (<div>
               Description:<input type="text" value={this.state.description} onChange={this.changeDescription.bind(this)}/>
               Quantity:<input type="text" value={this.state.quantity} onChange={this.changeQuantity.bind(this)}/>
-              <button style={{marginTop:10, width: 100, height: 30}}>Add Item</button>
+              <button style={{marginTop:10, width: 100, height: 30}} onClick={()=>this.props.postItem(this.state)}>Add Item</button>
             </div>);
   }
 }
